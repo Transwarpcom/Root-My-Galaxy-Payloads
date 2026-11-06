@@ -125,6 +125,8 @@ void *consumer_thread(void *arg __attribute__((unused))) {
         errno = 0;
         long sched_ret = sched_setattr_tid(tid, consumer_nice);
         int sched_errno = errno;
+        pr_info("consumer probe tid=%d ret=%ld errno=%d nice=%d\n",
+                tid, sched_ret, sched_errno, consumer_nice);
         if (sched_ret == 0) {
           atomic_fetch_add(&consumer_success, 1);
         } else {
