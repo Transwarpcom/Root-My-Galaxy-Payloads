@@ -167,7 +167,7 @@
 #define SLIDE_USE_FAKE_TASK      1
 #define SLIDE_RB_PARENT_TYPE_RESTORE 1ULL
 #define SLIDE_TRACEFS_EVENT_ID 84
-#define SLIDE_PSELECT_WORD_SHIFT 0
+#define SLIDE_PSELECT_WORD_SHIFT 4
 /* 5.10: waiter qword 0 overlaps the first fd-set qword (A155N derivation).
  * e2s=3 is the 6.1 value — do not copy across kernel versions. */
 #define SLIDE_P0_OFFSET_CANDIDATES \
